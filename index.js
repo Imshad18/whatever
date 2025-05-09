@@ -33,23 +33,22 @@ app.post("/ctf1", (req, res) => {
 app.get("/ctf2", (req, res) => {
   res.send(`
     <h2>Login - CTF 2</h2>
-    <p>Hint: The username might not be case-sensitive...</p>
+    <p>Login as Admin. Case matters.</p>
     <form method="POST" action="/ctf2">
       <input type="text" name="username" placeholder="Username" required /><br/>
       <input type="password" name="password" placeholder="Password" required /><br/>
       <button type="submit">Login</button>
     </form>
-    <p><a href="/">Back to CTF 1</a></p>
   `);
 });
 
 app.post("/ctf2", (req, res) => {
   const { username, password } = req.body;
-  // Flaw: Case-insensitive username comparison
-  if (username.toLowerCase() === "hacker" && password === "letmein") {
-    res.send("Access granted! FLAG{case_insensitive_vuln}");
+
+  if (username.toLowerCase() === "admin" && password === "Admin") {
+    res.send("Welcome Admin! FLAG{case_sensitivity_is_real}");
   } else {
-    res.send("Invalid username or password");
+    res.send("Access Denied");
   }
 });
 
