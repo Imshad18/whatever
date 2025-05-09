@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Route for CTF 1
-app.get("/ctf1", (req, res) => {
+app.get("/", (req, res) => {
   res.send(`
     <h2>Login - CTF 1</h2>
     <form method="POST" action="/login">
@@ -19,7 +19,7 @@ app.get("/ctf1", (req, res) => {
   `);
 });
 
-app.post("/login", (req, res) => {
+app.post("/ctf1", (req, res) => {
   const { username } = req.body;
   // Password is ignored entirely
   if (username === "admin") {
