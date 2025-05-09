@@ -11,7 +11,7 @@ app.get("/ctf1", (req, res) => {
   res.send(`
     <h2>Login - CTF 1</h2>
     <p>Can you login</p>
-    <form method="POST" action="/login">
+    <form method="POST" action="/ctf1">
       <input type="text" name="username" placeholder="Username" required /><br/>
       <input type="password" name="password" placeholder="Password" /><br/>
       <button type="submit">Login</button>
