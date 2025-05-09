@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/ctf1", (req, res) => {
   res.send(`
     <h2>Login - CTF 1</h2>
+    <p>Can you login</p>
     <form method="POST" action="/login">
       <input type="text" name="username" placeholder="Username" required /><br/>
       <input type="password" name="password" placeholder="Password" /><br/>
