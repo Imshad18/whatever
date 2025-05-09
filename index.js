@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Route for CTF 1
-app.get("/", (req, res) => {
+app.get("/ctf1", (req, res) => {
   res.send(`
     <h2>Login - CTF 1</h2>
     <form method="POST" action="/login">
