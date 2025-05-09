@@ -17,6 +17,7 @@ app.get("/ctf1", (req, res) => {
       <button type="submit">Login</button>
     </form>
     <p><a href="/ctf2">Next Page (CTF 2)</a></p>
+    <p><a href="https://cyberdefence.wiki">Home</a></p>
   `);
 });
 
@@ -39,6 +40,9 @@ app.get("/ctf2", (req, res) => {
       <input type="text" name="username" placeholder="Username" required /><br/>
       <input type="password" name="password" placeholder="Password" required /><br/>
       <button type="submit">Login</button>
+      <p><a href="/ctf1">CTF-1</a></p><p><a href="/ctf3">CTF-3</a></p>
+      <p><a href="https://cyberdefence.wiki">Home</a></p>
+      
     </form>
   `);
 });
